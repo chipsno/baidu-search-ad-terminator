@@ -1,0 +1,7 @@
+/* 百度搜索 */
+#content_left{ position: relative; }
+/* 匹配style以display开头的div后，移除。（目前的广告栏目就是这样的） */
+#content_left > div[style^="display"] {
+	position: absolute;
+	top: -9999px;
+}

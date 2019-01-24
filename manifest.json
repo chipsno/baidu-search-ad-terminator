@@ -1,0 +1,30 @@
+﻿{
+	"name": "百度搜索广告屏蔽",
+	"version": "1.0",
+	"short_name":"屏蔽百度搜索广告Chrome扩展程序",
+	"description":"屏蔽百度搜索广告。",
+	"background": {
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.baidu.com/*", "https://*.baidu.com/*"
+			],
+			"css":["src/css/style.css"],
+			"run_at":"document_start"
+		}
+	],
+	"permissions": [
+		"http://*.baidu.com/*", "https://*.baidu.com/*", "tabs"
+	],
+	"icons": {
+		"16": "src/images/icons/icon.png",
+		"48": "src/images/icons/icon.png",
+		"128": "src/images/icons/icon.png"
+	},
+	"browser_action": {
+		"name": "百度搜索广告屏蔽",
+		"default_icon": "src/images/icons/icon.png"
+	},
+	"manifest_version": 2
+}
